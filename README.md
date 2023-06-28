@@ -1,4 +1,4 @@
-# Workout_Final
+# Workout Final
 ## User Story
 ### AS A frequent gym goer
 ### I WANT website/application that I can easily access
