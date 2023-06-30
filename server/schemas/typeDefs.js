@@ -34,7 +34,6 @@ const typeDefs = gql`
     exercises(category: ID, name: String): [Exercise]
     exercise(_id: ID!): Exercise
     user: User
-    # exercise(_id: ID!): Exercise
   }
 
   type Mutation {

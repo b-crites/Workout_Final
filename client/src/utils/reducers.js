@@ -72,6 +72,19 @@ export const reducer = (state, action) => {
         ...state,
         currentCategory: action.currentCategory,
       };
+      case CLEAR_EXERCISE:
+        return {
+          ...state,
+          currentExercise: null,
+      };
+    case UPDATE_EXERCISE_REPETITION:
+      return {
+        ...state,
+        currentExercise: {
+          ...state.currentExercise,
+          repetitions: action.repetitions,
+      },
+    };
 
     // Return the state as is in the event that the `action.type` passed to our reducer was not accounted for by the developers
     // This saves us from a crash.
