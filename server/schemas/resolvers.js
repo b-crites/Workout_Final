@@ -2,6 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Exercise, Category } = require('../models');
 const { signToken } = require('../utils/auth');
 
+
 const resolvers = {
   Query: {
     categories: async () => {
@@ -37,6 +38,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+
   },
 
   Mutation: {
