@@ -30,10 +30,11 @@ export const reducer = (state, action) => {
     case UPDATE_EXERCISE_DURATION:
       return {
         ...state,
-        exercise.duration = action.duration,
-        exercise,
-        }
-
+        currentExercise: {
+          ...state.exercise,
+          duration: action.duration,
+        },
+      };
 
     case REMOVE_FROM_EXERCISE: // COME BACK TO THIS, NOT SURE IF NEEDED
       let newState = state.cart.filter((product) => {
