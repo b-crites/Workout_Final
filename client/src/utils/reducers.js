@@ -1,54 +1,41 @@
 import { useReducer } from 'react';
 import {
-  UPDATE_PRODUCTS,
-  ADD_TO_CART,
-  UPDATE_CART_QUANTITY,
-  REMOVE_FROM_CART,
-  ADD_MULTIPLE_TO_CART,
+  UPDATE_EXERCISES,
+  ADD_TO_EXERCISE,
+  UPDATE_EXERCISE_DURATION,
+  REMOVE_FROM_EXERCISE,
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
-  CLEAR_CART,
-  TOGGLE_CART,
+  CLEAR_EXERCISE,
+  UPDATE_EXERCISE_REPETITION,
 } from './actions';
 
 // The reducer is a function that accepts the current state and an action. It returns a new state based on that action.
 export const reducer = (state, action) => {
   switch (action.type) {
     // Returns a copy of state with an update products array. We use the action.products property and spread it's contents into the new array.
-    case UPDATE_PRODUCTS:
+    case UPDATE_EXERCISES:
       return {
         ...state,
-        products: [...action.products],
+        exercises: [...action.exercises],
       };
 
-    case ADD_TO_CART:
+    case ADD_TO_EXERCISE: // might not be needed
       return {
         ...state,
-        cartOpen: true,
-        cart: [...state.cart, action.product],
-      };
-    case ADD_MULTIPLE_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, ...action.products],
-      };
-    // Returns a copy of state, sets the cartOpen to true and maps through the items in the cart.
-    // If the item's `id` matches the `id` that was provided in the action.payload, we update the purchase quantity.
-    case UPDATE_CART_QUANTITY:
-      return {
-        ...state,
-        cartOpen: true,
-        cart: state.cart.map((product) => {
-          if (action._id === product._id) {
-            product.purchaseQuantity = action.purchaseQuantity;
-          }
-          return product;
-        }),
+        exercise: [...state.exercise, action.exercise],
       };
 
-    // First we iterate through each item in the cart and check to see if the `product._id` matches the `action._id`
-    // If so, we remove it from our cart and set the updated state to a variable called `newState`
-    case REMOVE_FROM_CART:
+
+    case UPDATE_EXERCISE_DURATION:
+      return {
+        ...state,
+        exercise.duration = action.duration,
+        exercise,
+        }
+
+
+    case REMOVE_FROM_EXERCISE: // COME BACK TO THIS, NOT SURE IF NEEDED
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
       });
