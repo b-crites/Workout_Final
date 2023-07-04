@@ -1,0 +1,17 @@
+.planner {
+    display: flex;
+    margin-bottom: auto;
+    transform: translateX(-101%);
+  }
+  
+  .day {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: white;
+    background-color: black;
+    /* transform: translateX(-800%); */
+  }
+
+  

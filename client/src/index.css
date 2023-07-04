@@ -1,12 +1,13 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
+  --primary: black;
+  --secondary: gray;
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+
 }
 
 * {
@@ -16,6 +17,7 @@
 html,
 body {
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +28,8 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+  background-color: #6A706E;
+  min-height: 100%;
 }
 
 h1,
@@ -79,34 +83,17 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  background: var(--primary);
-}
 
-header a {
-  color: var(--light);
-}
 
-button {
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0 1px;
-  background-color: var(--secondary);
-}
 
-button:hover {
+
+
+
+/* button:hover {
   opacity: .8;
-}
+} */
 
-button[disabled] {
-  cursor: default;
-  opacity: .8;
-}
+
 
 img {
   max-width: 100%;
@@ -198,7 +185,18 @@ input:focus {
   width: 25%;
   text-align: center;
 }
+.centerDiv{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
 
+}
+.active{
+  color: #B12704;
+  text-decoration: underline;
+  
+}
 .error-text {
   color: var(--error);
 }
