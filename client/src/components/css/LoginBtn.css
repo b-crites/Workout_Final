@@ -1,0 +1,44 @@
+.logInButton{
+    border-radius:15px ;
+    padding: .6rem;
+    font-size: large;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 105%;
+    cursor: pointer;
+    outline: none;
+
+}
+.logInButton:hover{
+    transform: scale(101%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.logInButton:active{
+    transform: scale(95%);
+}
+.media-show{
+    display: none;
+}
+@media screen and (max-width: 844px){
+    .media-hide{
+        display: none;
+    }
+    .media-show{
+        display: flex;
+    }
+    .menu-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2%;
+        border-radius: 10px;
+    }
+    .menu-btn:hover{
+        background-color: black;
+    }
+    .menu-btn:active{
+        background-color: black;
+        transform: scale(95%);
+    }
+}
