@@ -1,14 +1,27 @@
 import React from "react";
-import './css./Header.css';
+import "./CSS/Header.css";
+import Navigation from "./Navigation";
+import LoginBtn from "./LoginBtn";
 
 export default function Header(){
-    
+
+
     return(
 <div className="navbar-dark">
-<h3>Workout Web</h3>
-
+<div className="padding-left">
+<h3>Workout Final</h3>
+</div>
+<div className="nav-middle">
+<Navigation />
+</div>
+<div className="padding-right">
+    <LoginBtn />
+</div>
 
 </div>
 
+
+
+
 );
-}
+};
