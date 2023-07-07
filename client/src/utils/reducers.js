@@ -49,19 +49,6 @@ export const reducer = (state, action) => {
         cart: newState,
       };
 
-    case CLEAR_CART:
-      return {
-        ...state,
-        cartOpen: false,
-        cart: [],
-      };
-
-    case TOGGLE_CART:
-      return {
-        ...state,
-        cartOpen: !state.cartOpen,
-      };
-
     case UPDATE_CATEGORIES:
       return {
         ...state,
