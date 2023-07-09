@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function SearchSelect(){
 
     return(
@@ -8,7 +7,7 @@ export default function SearchSelect(){
         <>
         <div className="centerDiv">
     <div className="search">
-        <label htmlFor="muscles">Choose a Muscle: </label>
+        <label className='white-label' htmlFor="muscles">Choose a Muscle: </label>
         <select id="muscles" name="muscles">
             <option>Select...</option>
             <option>Abdomen</option>
