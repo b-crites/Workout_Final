@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Workouts from './pages/Workouts';
 import Planner from './pages/Planner';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './components/CSS/App.css'
 
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <div className='min-100'>
+
    <Header />
    <Routes>
    <Route path='/' element={<Home />} />
@@ -21,7 +21,6 @@ function App() {
    <Route path='/planner' element={<Planner />} />
    </Routes>
    <Footer />
-   </div>
    </>
   );
 }

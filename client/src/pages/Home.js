@@ -48,9 +48,9 @@ const Home = () => {
       <div className="vh">
       <div className="padding-top">
         <div className="trans-card-bg shadow offscreen">
-          <div className="card-Body img-over">
+          <div className="card-Body">
             <h1 className="text centerDiv">Welcome!</h1>
-            <h5 className="p-graph centerDiv">We are here to help with your workout!</h5>
+            <p className="p-graph centerDiv">We are here to help with your workout!</p>
           </div>
         </div>
       </div>
