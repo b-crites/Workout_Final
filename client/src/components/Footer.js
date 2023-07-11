@@ -7,6 +7,7 @@ export default function Footer() {
     <footer className="centerDiv footer-dark footer-row">
       <div className="footer-column">
         <button className="icon-btn"
+        aria-label="Brandon's Github"
           onClick={() => {
             window.open("https://github.com/b-crites");
           }}
@@ -15,6 +16,7 @@ export default function Footer() {
       </div>
       <div className="footer-column">
         <button className="icon-btn"
+        aria-label="Matthew's GitHub"
           onClick={() => {
             window.open("https://github.com/CollectSpiders");
           }}
@@ -23,6 +25,7 @@ export default function Footer() {
       </div>
       <div className="footer-column">
         <button className="icon-btn"
+        aria-label="Kevin's Github"
           onClick={() => {
             window.open("https://github.com/KevinJessie");
           }}

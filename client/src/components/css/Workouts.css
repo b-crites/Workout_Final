@@ -1,3 +1,6 @@
+body{
+    min-height: auto;
+}
 select{
     background-color: black;
     color: white;
@@ -93,9 +96,12 @@ hr{
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3%;
+    margin-bottom: auto;
   }
   
   .row > .column {
     flex: 1; /* Adjust this value based on the desired column layout */
+  }
+  .white-label{
+    color: white;
   }

@@ -4,26 +4,36 @@ import anime from "animejs";
 
 const Planner = () => {
 
-  useEffect(() => {
-    anime({
-      targets: '.planner .day',
-      translateX: '707%',
-      duration: 750,
-      delay: anime.stagger(150,{direction: 'reverse'})
-    });
-  }, []);
+
+  
+  // useEffect(() => {
+  //   anime({
+  //     targets: '.planner',
+  //     translateX: '',
+  //     duration: 750,
+  //     delay: anime.stagger(150)
+  //   });
+  // }, []);
     return (
 
         <>
 
 <div className="planner">
   <div className="day">Monday</div>
-  <div className="day">Tuesday</div>
-  <div className="day">Wednesday</div>
-  <div className="day">Thursday</div>
-  <div className="day">Friday</div>
-  <div className="day">Saturday</div>
-  <div className="day">Sunday</div>
+  <div className="card-holder">
+    {/* <div className="planner-card">
+      <h2>{props.title}</h2>
+      <p>Description: {props.description} </p>
+    </div> */}
+    </div>
+
+  <div className="day" id="tuesday">Tuesday</div>
+
+  <div className="day" id="wednesday">Wednesday</div>
+  <div className="day" id="thursday">Thursday</div>
+  <div className="day" id="friday">Friday</div>
+  <div className="day" id="saturday">Saturday</div>
+  <div className="day" id="sunday">Sunday</div>
 </div>
 </>
     )};
