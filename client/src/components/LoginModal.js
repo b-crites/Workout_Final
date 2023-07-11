@@ -3,7 +3,6 @@ import "../components/CSS/LoginModal.css";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER, LOGIN } from "../utils/mutations";
-import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 const LoginModal = () => {
   // const isLoggedIn = props.isLoggedIn;
@@ -19,6 +18,11 @@ const LoginModal = () => {
 
   const [loginUser] = useMutation(LOGIN);
   const [addUser] = useMutation(ADD_USER);
+
+  const handleLoginInputChange = (event) => {
+    const { name, value} = event.target;
+    setLoginData({...loginFormData, [name]: value});
+  };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -78,10 +82,10 @@ const LoginModal = () => {
 
               {activeForm === "login" && (
                 <>
-                  <div id="login-form">
+                  <form id="login-form" onSubmit={handleLogin}>
                     <h2 className="login-title">Welcome Back!</h2>
-                    <input type="text" placeholder="Email" />
-                    <input type="password" placeholder="**********" />
+                    <input type="text" name="email" value={loginFormData.email} onChange={handleLoginInputChange} placeholder="Email" />
+                    <input type="password" name="password" value={loginFormData.password} onChange={handleLoginInputChange} placeholder="**********" />
                     <button className="logInButton" type="submit">
                       Log In
                     </button>
@@ -91,7 +95,7 @@ const LoginModal = () => {
                         <a onClick={showSignup}>Signup</a>
                       </p>
                     </div>
-                  </div>
+                  </form>
                 </>
               )}
               {activeForm === "signup" && (
