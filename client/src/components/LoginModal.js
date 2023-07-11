@@ -1,11 +1,48 @@
 import React from "react";
 import "../components/CSS/LoginModal.css";
 import { useState } from "react";
-
+import { useMutation } from "@apollo/client";
+import { ADD_USER, LOGIN } from "../utils/mutations";
+import { LOGIN_USER } from "../utils/mutations";
+import Auth from "../utils/auth";
 const LoginModal = () => {
   // const isLoggedIn = props.isLoggedIn;
   const [isOpen, setIsOpen] = useState(false);
   const [activeForm, setActiveForm] = useState("login");
+  const [userFormData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [loginFormData, setLoginData] = useState({ email: "", password: "" });
+
+  const [loginUser] = useMutation(LOGIN);
+  const [addUser] = useMutation(ADD_USER);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userFormData, [name]: value });
+  };
+  const handleLogin = async (event) => {
+    try {
+      const { data } = await loginUser({ variables: { ...loginFormData } });
+      console.log(data);
+      Auth.login(data.loginUser.token);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleFormSubmit = async (event) => {
+    try {
+      const { data } = await addUser({ variables: { ...userFormData } });
+      console.log(data);
+      Auth.login(data.addUser.token);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const openModal = () => {
     setIsOpen(true);
@@ -50,7 +87,7 @@ const LoginModal = () => {
                     </button>
                     <div className="modal-footer centerDiv signup-link">
                       <p>
-                        Don't have an account?{" "}
+                        Don't have an account?
                         <a onClick={showSignup}>Signup</a>
                       </p>
                     </div>
@@ -58,12 +95,37 @@ const LoginModal = () => {
                 </>
               )}
               {activeForm === "signup" && (
-                <div id="signup-form">
+                <form id="signup-form" onSubmit={handleFormSubmit}>
                   <h2 className="login-title">Sign Up!</h2>
-                  <input className="input-50" type="text" placeholder="First Name" />
-                  <input className="input-50" type="text" placeholder="Last Name" />
-                  <input type="text" placeholder="Email" />
-                  <input type="password" placeholder="**********" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={userFormData.firstName}
+                    onChange={handleInputChange}
+                    placeholder="First Name"
+                  />
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={userFormData.lastName}
+                    onChange={handleInputChange}
+                    placeholder="Last Name"
+                  />
+                  <input
+                    type="text"
+                    name="email"
+                    value={userFormData.email}
+                    onChange={handleInputChange}
+                    placeholder="Email"
+                  />
+                  {/* <input type="text" name="username" value={userFormData.username} onChange={handleInputChange} placeholder="Username" /> */}
+                  <input
+                    type="password"
+                    name="password"
+                    value={userFormData.password}
+                    onChange={handleInputChange}
+                    placeholder="**********"
+                  />
                   <button className="logInButton" type="submit">
                     Sign Up
                   </button>
@@ -72,7 +134,7 @@ const LoginModal = () => {
                       Already have an account? <a onClick={showLogIn}>Login</a>
                     </p>
                   </div>
-                </div>
+                </form>
               )}
             </div>
           </div>

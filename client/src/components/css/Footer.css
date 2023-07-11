@@ -4,7 +4,8 @@
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
   left: 0;
-  bottom: auto;
+  bottom: 0;
+  position: absolute;
   right: 0;
   flex-shrink: 0;
 
