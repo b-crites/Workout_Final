@@ -10,7 +10,9 @@ const typeDefs = gql`
     _id: ID
 
   }
-
+  type Exercise{
+    _id: ID
+  }
   type Auth {
     token: ID
     user: User

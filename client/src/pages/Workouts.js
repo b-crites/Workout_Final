@@ -5,6 +5,9 @@ import anime from "animejs";
 
 
 const Workouts = () =>{
+
+
+    
     
 
     useEffect(() => {
@@ -39,18 +42,6 @@ const Workouts = () =>{
             </div>
         </div>
     </div>
-    {/* <div className="workout-dark-bg search">
-        <div className="workout-card padding">
-            <div className="text-left">
-            <h3 className="">Workout Name</h3>
-            <h5>Difficulty: </h5>
-            <h5>Description: </h5>
-            </div>
-            <div className="move-right">
-                <button className="add-btn">+</button>
-            </div>
-        </div>
-    </div>
     <div className="workout-dark-bg search">
         <div className="workout-card padding">
             <div className="text-left">
@@ -87,7 +78,31 @@ const Workouts = () =>{
             </div>
         </div>
     </div>
-     */}
+    <div className="workout-dark-bg search">
+        <div className="workout-card padding">
+            <div className="text-left">
+            <h3 className="">Workout Name</h3>
+            <h5>Difficulty: </h5>
+            <h5>Description: </h5>
+            </div>
+            <div className="move-right">
+                <button className="add-btn">+</button>
+            </div>
+        </div>
+    </div>
+    <div className="workout-dark-bg search">
+        <div className="workout-card padding">
+            <div className="text-left">
+            <h3 className="">Workout Name</h3>
+            <h5>Difficulty: </h5>
+            <h5>Description: </h5>
+            </div>
+            <div className="move-right">
+                <button className="add-btn">+</button>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
 </>

@@ -1,17 +1,19 @@
 import React from "react";
 
-
-export default function AddButton({ isLoggedIn }){
-    const display = {
-        display: 'none'
-
-    }
-return(
+export default function AddButton({ isLoggedIn }) {
+  const display = {
+    none: "none",
+  };
+  return (
     <>
-    { isLoggedIn ? (<div className="move-right">
-                <button className="add-btn">+</button>
-            </div>): (<div style={display}></div>)}
-    
+      {isLoggedIn ? (
+        <div className="move-right">
+          <button className="add-btn">+</button>
+        </div>
+      ) : (
+        <div style={{ display: none }}></div>
+      )}
     </>
-    );
+  );
 }
+   
