@@ -37,10 +37,13 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App() {
 
   return (
+
     <ApolloProvider client={client}>
+    <div className='min-100'>
 
     <>
    
@@ -52,6 +55,7 @@ function App() {
    </Routes>
    <Footer />
    </>
+   </div>
    </ApolloProvider>
   );
 }
