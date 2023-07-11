@@ -5,11 +5,12 @@
   padding-bottom: 0.8rem;
   left: 0;
   bottom: 0;
-  right: 0;
   position: absolute;
+  right: 0;
+  flex-shrink: 0;
+
 }
 .footer-row {
-  
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -31,4 +32,12 @@
   color: grey;
   transition: ease-in 0.2s;
   transform: scale(105%);
+}
+
+@media screen and (max-width: 844px) {
+
+  /* .footer-dark{
+    width: 100%;
+  } */
+  
 }
