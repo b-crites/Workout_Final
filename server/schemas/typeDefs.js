@@ -24,8 +24,8 @@ const typeDefs = gql`
     _id: ID
     name: String
     description: String
-    duration: Number
-    repetition: Number
+    duration: Int
+    repetition: Int
     category: Category
     ## image: String
   }

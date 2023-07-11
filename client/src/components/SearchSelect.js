@@ -11,9 +11,9 @@ export default function SearchSelect(){
         <select id="muscles" name="muscles">
             <option>Select...</option>
             <option>Abdomen</option>
-            <option>Chest</option>
-            <option>Quads</option>
             <option>Back</option>
+            <option>Chest</option>
+            <option>Legs</option>
         </select>
     <div className="searchBtn centerDiv">
         <button className="search-btn" id="SearchSelectBtn">Search</button>
