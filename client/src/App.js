@@ -4,18 +4,14 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Workouts from './pages/Workouts';
 import Planner from './pages/Planner';
-
-import { Routes, Route} from 'react-router-dom';
-import './components/CSS/App.css';
-import {
-  ApolloClient,
+import { Routes, Route } from 'react-router-dom';
+import './components/CSS/App.css'
+import {ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
-
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -41,6 +37,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App() {
 
   return (
@@ -48,6 +45,8 @@ function App() {
     <ApolloProvider client={client}>
     <div className='min-100'>
 
+    <>
+   
    <Header />
    <Routes>
    <Route path='/' element={<Home />} />
@@ -55,10 +54,9 @@ function App() {
    <Route path='/planner' element={<Planner />} />
    </Routes>
    <Footer />
-
+   </>
    </div>
    </ApolloProvider>
-
   );
 }
 

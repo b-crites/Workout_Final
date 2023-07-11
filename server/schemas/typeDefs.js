@@ -12,7 +12,9 @@ const typeDefs = gql`
     lastName: String
     email: String
   }
-
+  type Exercise{
+    _id: ID
+  }
   type Auth {
     token: ID
     user: User
