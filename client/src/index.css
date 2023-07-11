@@ -16,7 +16,7 @@
 
 html,
 body {
-  min-height: 100%;
+  
   overflow-x: hidden;
 }
 
@@ -29,8 +29,9 @@ body {
   font-size: 16px;
   color: var(--dark);
   background-color: #6A706E;
-  min-height: 100%;
+  
 }
+
 
 h1,
 h2,
@@ -81,10 +82,17 @@ a {
 
 a:hover {
   text-decoration: underline;
+  cursor: pointer;
+}
+.height{
+  height: 100%;
+  margin-bottom:auto;
 }
 
 
-
+label{
+  color: white;
+}
 
 
 

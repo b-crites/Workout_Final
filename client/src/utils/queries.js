@@ -11,9 +11,7 @@ export const QUERY_EXERCISES = gql`
         name
       }
       duration
-      weight
       reps
-      sets
     }
   }
 `;
@@ -37,10 +35,8 @@ export const QUERY_ALL_EXERCISES = gql`
         _id
         name
       }
-      duration
-      weight
+      duratio
       reps
-      sets
     }
   }
 `;
@@ -60,9 +56,7 @@ export const QUERY_USER = gql`
           name
         }
         duration
-        weight
         reps
-        sets
       }
     }
   }
