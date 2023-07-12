@@ -9,13 +9,14 @@ export default function Header(){
     return(
 <div className="navbar-dark">
 <div className="padding-left">
-<h3>Workout Final</h3>
+<h3 className="disabled">Workout Final</h3>
 </div>
 <div className="nav-middle">
 <Navigation />
 </div>
 <div className="padding-right">
     <LoginBtn />
+    {/* <h5 className="white-text disabled">Hello, User!</h5> */}
 </div>
 
 </div>

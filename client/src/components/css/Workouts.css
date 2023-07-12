@@ -96,7 +96,7 @@ hr{
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: auto;
+    margin-bottom: 5%;
   }
   
   .row > .column {

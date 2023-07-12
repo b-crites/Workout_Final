@@ -206,6 +206,12 @@ input:focus {
 .error-text {
   color: var(--error);
 }
+.white-text{
+  color: white;
+}
+.disabled{
+  cursor:default;
+}
 
 @media screen and (max-width: 768px) {
   .card {
