@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/CSS/LoginModal.css";
+import "../components/css/LoginModal.css";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER, LOGIN } from "../utils/mutations";
