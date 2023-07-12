@@ -1,46 +1,17 @@
-const { MongoClient } = require('mongodb');
-
-// Connection URI
-// haven't set up mongodb uri yet
-const uri = 'mongodb://your-mongodb-uri';
-
-// Database name
-const dbName = 'exercises';
+const Exercise = require("../models/Exercise");
+const db = require("../config/connection");
 
 // Sample data to seed
 const seedData = [
-    // add content below
-  {  },
-  {  },
-  // Add more sample data as needed
+  // add seed content below
+  { email: 'test@gmail.com', description: 'back wrokout', duration: 3, repetition: 15, category: 'back' },
+  { email: 'test@yahoo.com', description: 'arms workout', duration: 6, repetition: 20, category: 'arms' },
+  // Add more sample data below as needed
 ];
 
-// Function to seed the database
-async function seedDatabase() {
-  const client = new MongoClient(uri);
-
-  try {
-    // Connect to the MongoDB server
-    await client.connect();
-
-    // Access the database
-    const db = client.db(dbName);
-
-    // Access the collection
-    const collection = db.collection('your-collection-name');
-
-    // Insert the seed data into the collection
-    await collection.insertMany(seedData);
-
-// logs to console if the seed worked or not
-    console.log('Seed data inserted successfully!');
-  } catch (err) {
-    console.error('Error seeding the database:', err);
-  } finally {
-    // Close the connection
-    client.close();
-  }
-}
-
 // Call the seedDatabase function to start seeding
-seedDatabase();
+db.once('open', async () =>{
+  await Exercise.insertMany(seedData);
+  console.log('Database seeded!');
+  process.exit(0);
+});
