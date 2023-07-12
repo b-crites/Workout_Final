@@ -3,39 +3,58 @@ import "../components/CSS/LoginModal.css";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER, LOGIN } from "../utils/mutations";
-import Auth from "../utils/auth";
-const LoginModal = () => {
-  // const isLoggedIn = props.isLoggedIn;
+import Auth from '../utils/auth';
+
+
+const LoginModal = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeForm, setActiveForm] = useState("login");
+
+  // LOGIN
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, {error}] = useMutation(LOGIN);
+
+  const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...formState,
+        [name]: value,
+      });
+    };
+
+    const handleInputFormSubmit = async (event) => {
+      event.preventDefault();
+      console.log(formState);
+      try {
+        const { data } = await login({
+          variables: { ...formState },
+        });
+  
+        Auth.login(data.login.token);
+      } catch (e) {
+        console.error(e);
+      }
+
+      setFormState({
+          email: '',
+          password: '',
+        });
+      };
+      // LOGIN END_______________________________________________________________________________________________________________________________________________________
+    // SIGN UP
+  
   const [userFormData, setUserData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
   });
-  const [loginFormData, setLoginData] = useState({ email: "", password: "" });
 
-  const [loginUser] = useMutation(LOGIN);
   const [addUser] = useMutation(ADD_USER);
-
-  const handleLoginInputChange = (event) => {
-    const { name, value} = event.target;
-    setLoginData({...loginFormData, [name]: value});
-  };
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserData({ ...userFormData, [name]: value });
-  };
-  const handleLogin = async (event) => {
-    try {
-      const { data } = await loginUser({ variables: { ...loginFormData } });
-      console.log(data);
-      Auth.login(data.loginUser.token);
-    } catch (err) {
-      console.error(err);
-    }
   };
 
   const handleFormSubmit = async (event) => {
@@ -47,6 +66,9 @@ const LoginModal = () => {
       console.error(err);
     }
   };
+
+  // SIGNUP END_______________________________________________________________________________________________________________________________________________________
+    
 
   const openModal = () => {
     setIsOpen(true);
@@ -82,10 +104,24 @@ const LoginModal = () => {
 
               {activeForm === "login" && (
                 <>
-                  <form id="login-form" onSubmit={handleLogin}>
+                <form id="login-form" onSubmit={handleInputFormSubmit}>
                     <h2 className="login-title">Welcome Back!</h2>
-                    <input type="text" name="email" value={loginFormData.email} onChange={handleLoginInputChange} placeholder="Email" />
-                    <input type="password" name="password" value={loginFormData.password} onChange={handleLoginInputChange} placeholder="**********" />
+                    <input
+                      type="text"
+                      name="email"
+                      value={formState.email}
+                  onChange={handleChange}
+
+                      placeholder="Email"
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      value={formState.password}
+                  onChange={handleChange}
+
+                      placeholder="**********"
+                    />
                     <button className="logInButton" type="submit">
                       Log In
                     </button>
@@ -97,7 +133,12 @@ const LoginModal = () => {
                     </div>
                   </form>
                 </>
+              )}{error && (
+                <div className="loginFail centerDiv">
+                  <p>Something went wrong. Please try again.</p>
+                </div>
               )}
+  
               {activeForm === "signup" && (
                 <form id="signup-form" onSubmit={handleFormSubmit}>
                   <h2 className="login-title">Sign Up!</h2>

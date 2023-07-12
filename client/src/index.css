@@ -212,6 +212,9 @@ input:focus {
 .disabled{
   cursor:default;
 }
+.loginFail{
+  color: red;
+}
 
 @media screen and (max-width: 768px) {
   .card {
