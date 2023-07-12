@@ -8,9 +8,6 @@ const exerciseSchema = new Schema({
     required: true,
     trim: true
   },
-  description: {
-    type: String
-  },
   // image: {
   //   type: String
   // },
@@ -26,7 +23,7 @@ const exerciseSchema = new Schema({
   category: {
     type: String,
     required: true,
-    enum: ['arms', 'chest', 'back', 'legs']
+    enum: ['arms: ', 'chest: ', 'back: ', 'legs: ']
   }
 });
 
