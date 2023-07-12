@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
-
 const exerciseSchema = new Schema({
-  name: {
+  email: {
     type: String,
     required: true,
     trim: true
-  },
-  description: {
-    type: String
   },
   // image: {
   //   type: String
@@ -24,12 +19,10 @@ const exerciseSchema = new Schema({
     default: 1
   },
   category: {
-    type: Schema.Types.ObjectId,
-    ref: 'Category',
-    required: true
+    type: String,
+    required: true,
+    enum: ['arms: ', 'chest: ', 'back: ', 'legs: ']
   }
 });
-
 const Exercise = mongoose.model('Exercise', exerciseSchema);
-
 module.exports = Exercise;
