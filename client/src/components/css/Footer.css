@@ -1,0 +1,44 @@
+.footer-dark {
+    background-color: black;
+    display: flex;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    flex-shrink: 0;
+    
+  
+  }
+  .footer-row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .footer-column{
+   flex: 0 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+  }
+  .icon-btn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: auto;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .icon-btn:hover {
+    color: grey;
+    transition: ease-in 0.2s;
+    transform: scale(105%);
+  }
+  
+  @media screen and (max-width: 844px) {
+  
+    /* .footer-dark{
+      width: 100%;
+    } */
+    
+  }

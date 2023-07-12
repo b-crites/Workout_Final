@@ -8,10 +8,6 @@ const exerciseSchema = new Schema({
     required: true,
     trim: true
   },
-  // image: {
-  //   type: String
-  // },
-  // discuss with team to see if images is desired
   duration: {
     type: Number,
     required: true,
@@ -23,7 +19,7 @@ const exerciseSchema = new Schema({
   category: {
     type: String,
     required: true,
-    enum: ['arms: ', 'chest: ', 'back: ', 'legs: ']
+    enum: ['arms: decription', 'chest: ', 'back: ', 'legs: ']
   }
 });
 
