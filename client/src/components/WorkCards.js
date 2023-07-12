@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/Workouts.css";
+import "./CSS/Workouts.css";
 import AddButton from "./AddButton";
 
 export default function WorkCards(props) {
