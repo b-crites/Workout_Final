@@ -19,7 +19,10 @@ const exerciseSchema = new Schema({
   category: {
     type: String,
     required: true,
+
     enum: ['arms: decription', 'chest: ', 'back: ', 'legs: ']
+
+    
   }
 });
 
