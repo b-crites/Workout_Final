@@ -4,8 +4,10 @@ const db = require("../config/connection");
 // Sample data to seed
 const seedData = [
   // add seed content below
-  { email: 'test@gmail.com', description: 'back wrokout', duration: 3, repetition: 15, category: 'back' },
-  { email: 'test@yahoo.com', description: 'arms workout', duration: 6, repetition: 20, category: 'arms' },
+
+  { email: 'test@gmail.com', duration: 3, repetition: 15, category: 'back' },
+  { email: 'test@yahoo.com', duration: 6, repetition: 20, category: 'arms' },
+
   // Add more sample data below as needed
 ];
 

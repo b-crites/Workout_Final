@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
-import "../components/CSS/Home.css";
+import "../components/css/Home.css";
 
 const Home = () => {
   useEffect(() => {
@@ -11,35 +11,7 @@ const Home = () => {
       delay: 500
     });
   }, []);
-//   useEffect(() => {
-//   anime({
-//     targets: '.padding-top .trans-card-bg',
-//     translateX: '75%',
-//     delay: anime.stagger(100) // increase delay by 100ms for each elements.
-//   });
-// }, []);
 
-//   useEffect(() => {
-//     var tl = anime.timeline({
-//         duration: 1850
-//       });
-//       tl.add({
-//         targets: '.padding-top .p-graph',
-//         translateX: '75%'
-//       })
-//       .add({
-//         targets: '.padding-top .text',
-//         translateX: '72%'
-//       }, '-=300') // relative offset
-//       .add({
-//         targets: '.padding-top .card-Body',
-//         translateX: '75%'
-//       },'-=300' )
-//       .add({
-//         targets: '.padding-top .trans-card-bg',
-//         translateX: '75%'
-//       },'-=300' ); // 
-//     }, []);
   
   
 
@@ -50,12 +22,12 @@ const Home = () => {
         <div className="trans-card-bg shadow offscreen">
           <div className="card-Body">
             <h1 className="text centerDiv">Welcome!</h1>
-            <p className="p-graph centerDiv">We are here to help with your workout!</p>
+            <h4 className="p-graph centerDiv">We are here to help with your workout!</h4>
+            <h4 className="p-graph centerDiv">Go to the workouts page to get started with searching for your next exercise!</h4>
           </div>
         </div>
       </div>
     </div>
-    
   );
 };
 

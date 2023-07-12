@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./CSS/LoginBtn.css";
+import "./css/LoginBtn.css";
 import { SlMenu } from "react-icons/sl";
 import LoginModal from "./LoginModal";
 import { useNavigate } from "react-router-dom";

@@ -1,32 +1,39 @@
-.navbar-links li{
-    list-style-type: none;
-    color: wheat;
-    display: inline;
-
+.planner {
+    display: flex;
+    margin-bottom: auto;
+    flex-direction: column;
+    margin-bottom: 5%;
     
-}
-.navbar-links:active{
-    transform: scaleY();
-}
-.navbar-links li a{
+  }
+  
+  .day {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid gray;
     color: white;
-    font-size: 1.5rem;
-}
-.padding-between li{
-    margin-left: 10%;
-    margin-right: 10%;
-    justify-content: center;
+    background-color: black;
+    border-radius: 15px;
+  }
+  .card-holder{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .planner-card{
+    background-color: black;
+    border-radius: 15px;
+    margin: 2% 2% 2% 6%;
+    width: 40%;
+    padding: 1%;
+    color: white;
     
-}
-.width-30{
-    width: 30%;
-}
-.move-left{
-    transform: translateX(-100%);
-}
-@media screen and (max-width: 844px) {
-    .navbar-links{
-        display: none;
+  }
+
+  @media screen and (max-width: 844px)
+  {
+    .planner-card{
+      width: 100%;
     }
-    
-}
+  }
+
+  

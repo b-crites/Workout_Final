@@ -1,39 +1,38 @@
 .planner {
-    display: flex;
-    margin-bottom: auto;
-    flex-direction: column;
-    margin-bottom: 5%;
-    
-  }
+  display: flex;
+  margin-bottom: auto;
+  flex-direction: column;
+  margin-bottom: 5%;
   
-  .day {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid gray;
-    color: white;
-    background-color: black;
-    border-radius: 15px;
-  }
-  .card-holder{
-    display: flex;
-    flex-wrap: wrap;
-  }
+}
+
+.day {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid gray;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+}
+.card-holder{
+  display: flex;
+  flex-wrap: wrap;
+}
+.planner-card{
+  background-color: black;
+  border-radius: 15px;
+  margin: 2% 2% 2% 6%;
+  width: 40%;
+  padding: 1%;
+  color: white;
+  
+}
+
+@media screen and (max-width: 844px)
+{
   .planner-card{
-    background-color: black;
-    border-radius: 15px;
-    margin: 2% 2% 2% 6%;
-    width: 40%;
-    padding: 1%;
-    color: white;
-    
+    width: 100%;
   }
+}
 
-  @media screen and (max-width: 844px)
-  {
-    .planner-card{
-      width: 100%;
-    }
-  }
-
-  
