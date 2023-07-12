@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../components/CSS/Workouts.css";
+import "../components/css/Workouts.css";
 import SearchSelect from "../components/SearchSelect";
 import anime from "animejs";
 import Auth from "../utils/auth";

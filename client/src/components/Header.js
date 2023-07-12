@@ -1,5 +1,5 @@
 import React from "react";
-import "./CSS/Header.css";
+import "./css/Header.css";
 import Navigation from "./Navigation";
 import LoginBtn from "./LoginBtn";
 import Auth from "../utils/auth";

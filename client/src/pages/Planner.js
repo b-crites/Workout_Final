@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import '../components/CSS/Planner.css';
+import '../components/css/Planner.css';
 import Auth from "../utils/auth";
 
 const Planner = () => {
