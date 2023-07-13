@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/Footer.css";
+import "./CSS/Footer.css";
 import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {

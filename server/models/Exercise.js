@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
-
 const exerciseSchema = new Schema({
   email: {
     type: String,
@@ -25,7 +23,5 @@ const exerciseSchema = new Schema({
     
   }
 });
-
 const Exercise = mongoose.model('Exercise', exerciseSchema);
-
 module.exports = Exercise;

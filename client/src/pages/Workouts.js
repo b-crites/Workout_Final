@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../components/css/Workouts.css";
+import "../components/CSS/Workouts.css";
 import SearchSelect from "../components/SearchSelect";
 import anime from "animejs";
 import Auth from "../utils/auth";
@@ -14,6 +14,10 @@ const Workouts = () => {
       delay: 500,
     });
   }, []);
+
+  // useEffect(() => {
+  //   app.get("mongodb://localhost:27017/exercises")
+  // })
 
   return (
     <>

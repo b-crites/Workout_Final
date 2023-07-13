@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
-import "../components/css/Home.css";
+import "../components/CSS/Home.css";
 
 const Home = () => {
   useEffect(() => {
