@@ -1,5 +1,7 @@
+// Importing the gql function from the 'apollo-server-express' package
 const { gql } = require('apollo-server-express');
 
+// Defining the GraphQL schema using the gql template literal
 const typeDefs = gql`
   type Category {
     _id: ID
@@ -12,9 +14,11 @@ const typeDefs = gql`
     lastName: String
     email: String
   }
+
   type Exercise{
     _id: ID
   }
+
   type Auth {
     token: ID
     user: User
@@ -29,7 +33,6 @@ const typeDefs = gql`
     category: Category
     ## image: String
   }
-  
 
   type Query {
     categories: [Category]
@@ -46,4 +49,5 @@ const typeDefs = gql`
   }
 `;
 
+// Exporting the typeDefs variable, which contains the GraphQL schema
 module.exports = typeDefs;
