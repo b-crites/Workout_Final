@@ -10,7 +10,7 @@ export default function SearchSelect() {
           </label>
           <select id="muscles" name="muscles">
             <option>Select...</option>
-            <option>Abdomen</option>
+            <option>Arms</option>
             <option>Back</option>
             <option>Chest</option>
             <option>Legs</option>

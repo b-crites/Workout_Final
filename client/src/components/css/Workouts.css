@@ -105,3 +105,14 @@ hr{
   .white-label{
     color: white;
   }
+  .modal ul li{
+    background-color: black;
+    list-style-type: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width:764px) {
+    .workout-dark-bg{
+        width: 75%;
+    }
+  }

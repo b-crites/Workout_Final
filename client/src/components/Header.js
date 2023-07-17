@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <div className="navbar-dark">
       <div className="padding-left">
-        <h3 className="disabled">Workout Final</h3>
+        <h3 className="disabled">Workout Search</h3>
       </div>
       <div className="nav-middle">
         <Navigation />
