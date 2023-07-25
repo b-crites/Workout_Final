@@ -17,7 +17,7 @@
       "web-vitals": "^2.1.4"
     },
     "scripts": {
-      "start": "cd client && react-scripts",
+      "start": "react-scripts",
       "server": "cd server && npm run watch",
       "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
       "build": "react-scripts build",
